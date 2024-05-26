@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            color:#122d4e;
+            background:linear-gradient(rgb(8, 6, 8) , blue);
+            background-image: url('https://cmsv2-assets.apptegy.net/uploads/3325/file/1812224/9c32ab66-f3f9-4bb2-b32e-7c8517a70a11.gif') ;
+            background-size: 600px;
+            height: 100px;
+        }
+        #nav{
+            display:flex;
+            width: 100%;
+            height: 50px;
+            align-items:center;
+            gap:10px;
+            border-radius:20px;
+            position:static;
+            font-family: Arial, Helvetica, sans-serif;
+            opacity:90%;
+            background:linear-gradient(to right ,rgb(4,5,6),blue);
+        }
+        .navele{
+            text-decoration : none;
+            margin-left:20px;
+            color:white;
+        }
+        #Box{
+            /* border:solid 1px skyblue; */
+            border-radius: 4pc;
+            box-shadow: 1px 3px 12px rgb(14, 179, 233);
+            margin-top:10em;
+            margin-left:4em;
+            margin-right: 4em;
+            margin-bottom:10em;
+            height: 30em;
+            background: linear-gradient(rgb(32, 95, 221)  , white );
+            opacity: 93%;
+            position: relative;
+        }
+        .content{
+            font-size: larger;
+            opacity: 100%;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        #BranchName{
+            margin-top:20px;
+            border-radius: 5px;
+            height: 1.6em;
+        }
+        #BranchName:hover, #year:hover, #total:hover,#section:hover , #subject:hover{
+            border-color: rgb(224, 169, 67);
+            border-radius: 8px;
+            background-color: skyblue;
+        }
+        #BranchName::selection , #year::selection , #total::selection{
+            background-color:green ;
+            color:green ; 
+        }
+        #choosefile{
+            margin-top: 20px;
+            border-radius: 5px;
+            margin-left:15%;
+            justify-self: center;
+        }
+        #boxofattendance{
+            border:solid yellow;
+            width: 100px;
+            height: 7%;
+            justify-content: center;
+            align-items: center;
+            margin:auto;
+            background-color: white;
+            border-radius: 5px;
+            opacity: 100%;
+        
+        }
+        #date{
+            margin-top:10px;
+            border-radius: 4px;
+        }
+        #year{
+            margin-top:15px;
+            border-radius: 5px;
+            height: 1.6em;
+            position: relative;
+        }
+        #submit{
+            margin-top: 5px;
+            border-radius:15px;
+            background-color: #eff315;
+            height: 50px;
+            margin-top: 15px;
+            text-decoration : none;
+            padding:10px 10px ;
+        }
+        #submit:hover{
+            background-color: #112bd9;
+            border-color: rgb(234, 181, 9);
+            
+        }
+        #submitblock{
+            margin-top:10px;
+        }
+        #total{
+            margin-top: 15px;
+            height: 1.6em;
+            border-radius: 5px;
+        }
+        #subject{
+            margin-top:15px;
+            border-radius: 5px;
+            height: 1.6em;
+        }
+        #section{
+            margin-top:15px;
+            border-radius: 5px;
+            height: 1.6em;
+            /* margin-bottom:10%; */
+        }
+        #time{
+            margin-top:15px;
+            border-radius: 5px;
+            height: 1.6em;
+        }
+        #totalstudent{
+            margin-top:5px;
+            border-radius: 3px;
+            height: 1.6em;
+        }
+        #totalstudent:hover{
+            background-color: #25d7d7;
+            border-color: rgb(234, 181, 9);     
+        }
+        .navele:hover{
+            color:yellow;
+            font-size:larger;
+          
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="nav">
+            <a href="/" class="navele">HOME</a>
+            <a href="" class="navele">{{signup}}</a>
+            <a href="/Contactus" class="navele">ContactUs</a>
+        </div>
+        
+        <div id="Box">
+            <div id="boxofattendance">
+                <div class="content" align="center">Attendance</div>
+            </div><br><br>
+            <form id="form" name ="form" align="center" action="/thankyou" method="get"> 
+                <label for="Branch">Branch</label>
+
+<select id="branchName" align="center" name="branchName">
+<option value="CS">CS</option>
+<option value="IT">IT</option>
+<option value="EC">EC</option>
+<option value="EC">ME</option>
+<option value="EC">CIVIL</option>
+</select>
+                <br><br><label>Enter the Attendance sheet</label><br>
+                <input type="file" placeholder="Enter the image" id="choosefile" name="filechoosing" accept="image/png, image/jpeg" required><br><br>
+                <label for="Branch"><strong> Year </strong></label>
+                <select id="branchName" align="center" name = "year">
+                <option value="1">1st</option>
+                <option value="2">2nd</option>
+                <option value="3">3rd</option>
+                <option value="4">4th</option>
+                </select><br><label>Time</label>
+                <input align = "center"type="time" name ="time" id = "time" required><br>
+                <label > Section </label> 
+                <select id="section" align="center" name="section">
+                    <option value ="A">Section A</option>
+                    <option value="B">Section B</option>
+                    <option value="C">Section C</option>
+                    <option value="I">Section I</option>
+                    <option value="M">Section M</option>
+                    <option value="E">Section E </option> 
+                    <option value="CE">Section CE</option>
+                </select><br>
+                <label>Subject </label>
+                <input type="text" placeholder="Subject" aria-placeholder="Subject" id="subject" name="subject" required><br>
+                <label>date</label>
+                <input type="date" placeholder="Date" id="date" name="date" required><br>
+                <button id="submit" type="submit">Submit</button>
+            </form> 
+        </div>
+    </div>
+    <script>      
+    </script>
+</body>
+</html>
